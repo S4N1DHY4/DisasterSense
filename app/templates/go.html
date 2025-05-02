@@ -1,0 +1,162 @@
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+    <hr />
+    <h4 class="text-center" style="color: #3b3b3b; font-weight: bold; font-family: 'Libre Baskerville', serif !important; opacity: 0; animation: fadeIn 0.8s ease-out 0.5s forwards;">MESSAGE</h4>
+    <p class="text-center" style="font-size: 15px; color: #555; font-family: 'Libre Baskerville', serif !important; font-weight: bold; opacity: 0; animation: fadeIn 0.8s ease-out 0.8s forwards;"><i>{{ query }}</i></p>
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center" style="margin-top: 30px; color: #2d2d2d; opacity: 0; animation: slideUp 0.8s ease-out 1s forwards;">Result</h1>
+    
+    <style>
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .result-item {
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            font-size: 18px;
+            animation: slideUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .result-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .active-result {
+            background-color: #002248;
+            color: #ffffff;
+            border: 1px solid #a9dfbf;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .active-result::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            from {
+                transform: translateX(-100%) rotate(45deg);
+            }
+            to {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .inactive-result {
+            background-color: #fafcfd;
+            color: #3b4147;
+            border: 1px solid #cbd3da;
+        }
+
+        .health-section {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 1.5s forwards;
+        }
+
+        .health-title {
+            color: #2d2d2d;
+            font-size: 24px;
+            margin: 30px 0;
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .disaster-title {
+            background-color: #f8f9fa;
+            color: #2d2d2d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .disaster-title:hover {
+            background-color: #e9ecef;
+            transform: scale(1.01);
+        }
+
+        .disease-info {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .disease-info:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+
+    <ul class="list-group" style="max-width: 100%; margin: 0 auto;">
+        {% for category, classification in classification_result.items() %}
+            <li class="list-group-item text-center result-item {% if classification == 1 %}active-result{% else %}inactive-result{% endif %}" 
+                style="animation-delay: {{ loop.index * 0.1 + 1 }}s">
+                {{ category.replace('_', ' ').title() }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% if diseases_info %}
+        <div class="health-section">
+            <h3 class="health-title">Active Health Threats and Prevention Measures</h3>
+            <div class="list-group">
+                {% for disaster, disease_list in diseases_info.items() %}
+                    <h4 class="disaster-title">{{ disaster.replace('_', ' ').title() }}</h4>
+                    {% for disease_info in disease_list %}
+                        <div class="disease-info">
+                            <p style="font-size: 18px; margin-bottom: 10px;">
+                                <strong style="color: #002248; font-size: 20px;">{{ disease_info['disease'] }}</strong><br>
+                                <span style="color: #555;">Prevention Measures: {{ disease_info['prevention_measures'] }}</span>
+                            </p>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+<script type="text/javascript">
+    window.onpopstate = function(event) {
+        window.location.href = "/";  
+    };
+</script>

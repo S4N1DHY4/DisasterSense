@@ -10,6 +10,7 @@ from sqlalchemy import create_engine
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import fbeta_score, make_scorer
+from sklearn.feature_extraction.text import CountVectorizer
 
 from sklearn.model_selection import train_test_split,RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
@@ -28,7 +29,6 @@ from nltk.stem import WordNetLemmatizer
 def load_data(database_filepath):
     engine = create_engine('sqlite:///{}'.format(database_filepath))
     df = pd.read_sql_table('messages', engine)
-
     X = df['message']
     Y = df.iloc[:, 4:]
 
