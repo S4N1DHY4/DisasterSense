@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="description"/>
+  <meta name="keywords" content="keywords"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="shortcut icon" href="/images/title.png"/>
+  <title>DeSense Rescue - Blockchain fund raising & charity platform</title>
+  <link rel="stylesheet" href="/css/styles.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript" async=""></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700%7CPermanent+Marker:400" media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto+Slab:wght@100..900&family=Rubik+Doodle+Shadow&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="/src/styles/animations.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    header.header{
+      background: transparent;
+      position: absolute;
+      left: 0;
+      top: -10%;
+      z-index: 100;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    footer.footer{
+      background-color: black;
+    }
+    .promo-slider__title {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .promo-slider__subtitle {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .promo-slider__button {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .icon-item {
+      transition: transform 0.3s ease;
+    }
+    .icon-item:hover {
+      transform: translateY(-10px);
+    }
+    .icon-item__img svg {
+      transition: transform 0.3s ease;
+    }
+    .icon-item:hover .icon-item__img svg {
+      transform: scale(1.1);
+    }
+    .promo-slider__button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .promo-slider__button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 187, 0, 0.2);
+    }
+    .promo-slider__button::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+      transform: scale(0);
+      transition: transform 0.5s ease-out;
+    }
+    .promo-slider__button:hover::after {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <header class="header header--front_2">
+    <div class="">
+      <div class="row no-gutters justify-content-between">
+        <div class="col-auto d-flex align-items-center">
+          <div class="header-logo">
+            <a class="header-logo__link" href="/">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="promo promo--front_2">
+      <div class="promo-slider">
+        <div class="promo-slider__item promo-slider__item--style-1">
+          <picture>
+            <source srcset="/images/bg1.jpg" media="(min-width: 992px)"/><img class="img--bg" src="/images/promo_2-2.jpg" alt="img"/>
+          </picture>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="align-container">
+                  <div class="align-container__item">
+                    <div class="promo-slider__wrapper-1">
+                      <h2 class="promo-slider__title"><span style="font-family: 'Montserrat', serif;font-weight: bold;">When Disaster Strikes, We Unite.</span></h2>
+                    </div>
+                    <div class="promo-slider__wrapper-2">
+                      <p class="promo-slider__subtitle" style="font-family: 'Montserrat', serif;font-size: 20px;">Revolutionizing disaster relief with blockchain—transparent, secure, and direct aid when it matters most, ensuring every donation makes an impact instantly.</p>
+                    </div>
+                    <div class="promo-slider__wrapper-3">
+                      <a class="button promo-slider__button button--primary" style="font-size: 26px; max-width: 382px; background: rgba(255, 187, 0, 0.419);" href="#new">Support the Cause</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="new" class="section" style="background-color: rgb(255, 255, 255); font-family:'Montserrat';">
+      <div class="container">
+        <div class="row margin-bottom">
+          <div class="col-12">
+            <div class="heading heading--primary heading--center" data-aos="fade-up">
+              <span class="heading__pre-title" style="font-size: 46px; color: rgb(215, 118, 0);">What We Do</span>
+              <h2 class="heading__title no-margin-bottom" style="font-size: 61px; color: black;"><span>We do it</span> <span>for all people</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row offset-margin">
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-item text-left text-center text-sm-left">
+              <div class="icon-item__img">
+                <svg class="icon icon-item__icon icon-item__icon--smaller color--blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40 0 32 0 352 256 0 0-352 0-32 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM96 96L64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l32 0L96 96zM416 480l32 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-32 0 0 384zM224 208c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 48 48 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-48 0 0 48c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-48-48 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l48 0 0-48z"/></svg>
+                </svg>
+              </div>
+              <div class="icon-item__text">
+                <p class="color--blue">Emergency Medical Aid</p>
+                <span>Providing life-saving medical assistance in disaster-stricken areas with blockchain-backed transparency. Every donation ensures critical supplies reach those who need them most—fast and efficiently.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-item text-left text-center text-sm-left">
+              <div class="icon-item__img">
+                <svg class="icon icon-item__icon icon-item__icon--smaller color--blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 0a128 128 0 1 1 0 256A128 128 0 1 1 320 0zM40 64c22.1 0 40 17.9 40 40l0 40 0 80 0 40.2c0 17 6.7 33.3 18.7 45.3l51.1 51.1c8.3 8.3 21.3 9.6 31 3.1c12.9-8.6 14.7-26.9 3.7-37.8l-15.2-15.2-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32 15.2 15.2c0 0 0 0 0 0l25.3 25.3c21 21 32.8 49.5 32.8 79.2l0 78.9c0 26.5-21.5 48-48 48l-66.7 0c-17 0-33.3-6.7-45.3-18.7L28.1 393.4C10.1 375.4 0 351 0 325.5L0 224l0-64 0-56C0 81.9 17.9 64 40 64zm560 0c22.1 0 40 17.9 40 40l0 56 0 64 0 101.5c0 25.5-10.1 49.9-28.1 67.9L512 493.3c-12 12-28.3 18.7-45.3 18.7L400 512c-26.5 0-48-21.5-48-48l0-78.9c0-29.7 11.8-58.2 32.8-79.2l25.3-25.3c0 0 0 0 0 0l15.2-15.2 32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32-15.2 15.2c-11 11-9.2 29.2 3.7 37.8c9.7 6.5 22.7 5.2 31-3.1l51.1-51.1c12-12 18.7-28.3 18.7-45.3l0-40.2 0-80 0-40c0-22.1 17.9-40 40-40z"/></svg>
+                </svg>
+              </div>
+              <div class="icon-item__text">
+                <p class="color--blue">Rebuild Communities</p>
+                <span>From emergency shelters to long-term housing, we ensure transparent and secure fund distribution for reconstruction efforts, helping communities rebuild stronger after disasters.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-item text-left text-center text-sm-left">
+              <div class="icon-item__img">
+                <svg class="icon icon-item__icon icon-item__icon--smaller color--blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M120 0l80 0c13.3 0 24 10.7 24 24l0 40L96 64l0-40c0-13.3 10.7-24 24-24zM32 167.5c0-19.5 10-37.6 26.6-47.9l15.8-9.9C88.7 100.7 105.2 96 122.1 96l75.8 0c16.9 0 33.4 4.7 47.7 13.7l15.8 9.9C278 129.9 288 148 288 167.5c0 17-7.5 32.3-19.4 42.6C280.6 221.7 288 238 288 256c0 19.1-8.4 36.3-21.7 48c13.3 11.7 21.7 28.9 21.7 48s-8.4 36.3-21.7 48c13.3 11.7 21.7 28.9 21.7 48c0 35.3-28.7 64-64 64L96 512c-35.3 0-64-28.7-64-64c0-19.1 8.4-36.3 21.7-48C40.4 388.3 32 371.1 32 352s8.4-36.3 21.7-48C40.4 292.3 32 275.1 32 256c0-18 7.4-34.3 19.4-45.9C39.5 199.7 32 184.5 32 167.5zM96 240c0 8.8 7.2 16 16 16l96 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-96 0c-8.8 0-16 7.2-16 16zm16 112c-8.8 0-16 7.2-16 16s7.2 16 16 16l96 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-96 0z"/></svg>
+                </svg>
+              </div>
+              <div class="icon-item__text">
+                <p class="color--blue">Relief Essentials</p>
+                <span>Access to clean water and essential food supplies is crucial in disaster zones. Our blockchain-powered tracking system ensures aid is delivered directly, preventing misuse and delays.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-item text-left text-center text-sm-left">
+              <div class="icon-item__img">
+                <svg class="icon icon-item__icon icon-item__icon--smaller color--blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l2.6-2.4C267.2 438.6 256 404.6 256 368c0-97.2 78.8-176 176-176c28.3 0 55 6.7 78.7 18.5c.9-6.5 1.3-13 1.3-19.6l0-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1l0 5.8c0 41.5 17.2 81.2 47.6 109.5zM576 368a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zm-76.7-43.3c6.2 6.2 6.2 16.4 0 22.6l-72 72c-6.2 6.2-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L416 385.4l60.7-60.7c6.2-6.2 16.4-6.2 22.6 0z"/></svg>
+                </svg>
+              </div>
+              <div class="icon-item__text">
+                <p class="color--blue">Supporting Survivors</p>
+                <span>Beyond immediate relief, we focus on long-term recovery—mental health support, community rebuilding, and sustainable development—all verified through decentralized trust.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="root"></div>
+  </main>
+
+  <footer class="footer" style="padding: 0 0 50px 0; !important;">
+    <div class="container">
+      <div class="row align-items-baseline">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="/js/lib.min.js"></script>
+<script src="/js/common.min.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+
+  window.addEventListener('load', () => {
+    gsap.timeline()
+      .to('.promo-slider__title', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out'
+      })
+      .to('.promo-slider__subtitle', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out'
+      }, '-=0.5')
+      .to('.promo-slider__button', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out'
+      }, '-=0.5');
+  });
+</script>
+</body>
+</html>
