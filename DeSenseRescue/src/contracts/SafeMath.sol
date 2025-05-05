@@ -27,9 +27,6 @@ library SafeMath {
     }
 
     function mul(uint256 a, uint256 b) internal pure returns (uint256) {
-        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the
-        // benefit is lost if 'b' is also tested.
-        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522
         if (a == 0) {
             return 0;
         }
@@ -50,11 +47,8 @@ library SafeMath {
         uint256 b,
         string memory errorMessage
     ) internal pure returns (uint256) {
-        // Solidity only automatically asserts when dividing by 0
         require(b > 0, errorMessage);
         uint256 c = a / b;
-        // assert(a == b * c + a % b); // There is no case in which this doesn't hold
-
         return c;
     }
 

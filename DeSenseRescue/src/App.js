@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { default as web3 } from './web3'
 import DeSenseRescueInstance from "./contracts/DeSenseRescueInstance";

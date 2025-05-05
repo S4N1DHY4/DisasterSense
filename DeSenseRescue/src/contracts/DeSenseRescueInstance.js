@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import {default as web3} from '../web3'
 
 const address = 'your_contract_address';

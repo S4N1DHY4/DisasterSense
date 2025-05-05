@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import Web3 from 'web3';
 
 if (window.ethereum) {
